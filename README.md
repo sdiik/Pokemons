@@ -1,5 +1,7 @@
 # Pokemons
 
+This Pokemon application is an application built using SwiftUI, this application was built without the help of a third party. This application provides information about the types of Pokemon, where users can find out the characters and types of Pokemon. Apart from that, users can also save the Pokemon they like which can be seen in the favorites list
+
 <img width="275" alt="Screenshot 2023-10-23 at 10 25 03" src="https://github.com/sdiik/Pokemons/assets/17142848/956bc240-6b59-4c4a-8ccb-78f2a17c0d9c">
 
 <img width="275" alt="Screenshot 2023-10-23 at 10 25 10" src="https://github.com/sdiik/Pokemons/assets/17142848/9006d253-a33c-4c64-a9e2-a937340313fa">
