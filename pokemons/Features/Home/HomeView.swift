@@ -14,22 +14,19 @@ struct HomeView: View {
     @State var safeAreaInsets: EdgeInsets = .init()
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                CustomNavigationView(vm:viewModel.setupNavigationBar())
-                    .frame(height: 48)
-                ScrollView {
-                    LazyVGrid(columns: gridItems, spacing: 20) {
-                        ForEach(viewModel.pokemons) { pokemon in
-                            PokemonCell(pokemon: pokemon)
-                        }
-                    }.padding(.top, 8)
-                }
-                .task {
-                    viewModel.fetchPokemon()
-                }
+        VStack(spacing: 0) {
+            CustomNavigationView(vm:viewModel.setupNavigationBar())
+                .frame(height: 48)
+            ScrollView {
+                LazyVGrid(columns: gridItems, spacing: 20) {
+                    ForEach(viewModel.pokemons) { pokemon in
+                        PokemonCell(pokemon: pokemon)
+                    }
+                }.padding(.top, 8)
             }
-        }
-        .navigationBarBackButtonHidden(true)
+            .task {
+                viewModel.fetchPokemon()
+            }
+        }.padding(.bottom, 8)
     }
 }

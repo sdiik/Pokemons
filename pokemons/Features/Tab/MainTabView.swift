@@ -12,16 +12,17 @@ struct MainTabView: View {
     @State var selectedTab = 0
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label(TabItem.home.title, systemImage: TabItem.home.iconName)
-                }
-            FavoriteView()
-                .tabItem {
-                    Label(TabItem.favorite.title, systemImage: TabItem.favorite.iconName)
-                }
-            
+        NavigationView {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label(TabItem.home.title, systemImage: TabItem.home.iconName)
+                    }
+                FavoriteView()
+                    .tabItem {
+                        Label(TabItem.favorite.title, systemImage: TabItem.favorite.iconName)
+                    }
+            }
         }
     }
 }
